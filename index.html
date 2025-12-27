@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Montres Hommes - abyass_watches®</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+header {
+    background: #a90000;
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .logo { font-size: 24px; font-weight: bold; }
+header nav a {
+    color: #fff; margin-left: 25px;
+    text-decoration: none; font-weight: bold; transition: color 0.3s;
+}
+header nav a:hover { color: #00ff00; }
+
+.container { max-width: 1200px; margin: auto; padding: 30px 20px; }
+h1 { text-align: center; margin-bottom: 10px; }
+p.description { text-align: center; color: #2e841b; margin-bottom: 30px; }
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+.card h3 { margin: 10px 0 5px 0; font-size: 16px; }
+.card p.price { margin-bottom: 10px; color: #a90000; font-weight: bold; }
+.buy-btn {
+    background: #a90000;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
+.buy-btn:hover { background: #ff0000; }
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+footer .social-icons { margin-top: 10px; }
+footer .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+footer .social-icons a:hover { color: #00ff00; }
+
+@media (max-width: 768px) {
+    header { flex-direction: column; align-items: flex-start; }
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+.overlay-content .colors {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.overlay-content .color-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ccc;
+}
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">ABYASS WATCHES</div>
+    <nav>
+        <a href="#">Femmes</a>
+        <a href="#">Hommes</a>
+        <a href="#">Enfants</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>WELCOME TO ABYASS_WATCHES STORE</h1>
+    <p class="description">Découvrez notre collection de montres pour hommes au Maroc.</p>
+
+    <div class="products">
+        <div class="card">
+            <img src="d4f83d4b-fc09-4d65-9d02-a89b66967cd3.jfif" alt="Seiko Presage" class="card-image">
+            <h3>TISSOT ACIER BOITE SIMPLE</h3>
+            <p class="price">160 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="6a094739-32bf-4556-9374-6a091bad9532.jfif" alt="Tissot Chrono" class="card-image">
+            <h3>TISSOT ACIER BOITE SIMPLE</h3>
+            <p class="price">160 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="c9a53cf0-15d6-4662-a169-320069da5e42.jfif" alt="Casio Sport" class="card-image">
+            <h3>TISSOT ACIER BOITE SIMPLE</h3>
+            <p class="price">160 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="8219c1d2-0e63-4c38-a35f-bfc75a1bc6bb.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>TISSOT ACIER BOITE SIMPLE</h3>
+            <p class="price">150 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="b64fe1e1-c2ad-4a4d-8b69-8305a32efa65.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>TISSOT FULL BLACK BOITE SIMPLE</h3>
+            <p class="price">150 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="0b96186f-64b4-4505-b868-464941937e40.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>PATEK BLACK 2025 BOITE SIMPLE</h3>
+            <p class="price">185 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="c9fc0e49-ac3c-433c-9fc6-925e82b17395.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>PATEK VERT 2025 BOITE SIMPLE</h3>
+            <p class="price">185 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+          <div class="card">
+            <img src="4eff3a3a-30c6-4261-9b25-1fa37549cbff.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>PATEK Blanc 2025 BOITE SIMPLE</h3>
+            <p class="price">185 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+          <div class="card">
+            <img src="2aece90f-5210-41ed-9c2e-7577eb2be516.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>PATEK BLEU 2025 BOITE SIMPLE</h3>
+            <p class="price">185 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+          <div class="card">
+            <img src="985c9cdd-7148-41f9-b5ec-48f3daed05a8.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>JENNA CLOCK BOITE SIMPLE</h3>
+            <p class="price">170 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+          <div class="card">
+            <img src="7073c906-8138-4f73-8767-0ca104de0f6d.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>JENNA CLOCK BOITE SIMPLE</h3>
+            <p class="price">170 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+          <div class="card">
+            <img src="0b0814ba-a6a3-4109-8d60-d46d32ca9453.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>DANIEL WELLINGTON DW BOITE SIMPLE</h3>
+            <p class="price">170 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+          <div class="card">
+            <img src="976f0d8c-a296-4f17-80f3-ac10fc1d3ed7.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>Dior BOITE SIMPLE</h3>
+            <p class="price">180 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+         <div class="card">
+            <img src="d31a2747-2eb3-4f55-a15b-e3e40f7ed9ad.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>EMPORIO ARMANI BOITE SIMPLE</h3>
+            <p class="price">210 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="30229ec0-e668-48c8-a0c5-f9e5a86c171d.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>CASIO  BOITE SIMPLE</h3>
+            <p class="price">150 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="b9408dc6-0885-4dcd-b654-b6c0d6582cc4.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>CASIO  BOITE SIMPLE</h3>
+            <p class="price">150 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+         <div class="card">
+            <img src="70ef7c30-2377-4551-a72d-f77242e6efd8.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX BLEU BOITE SIMPLE</h3>
+            <p class="price">200 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="35952cd6-6f55-469c-bb81-5b981d14d370.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX VERT BOITE SIMPLE</h3>
+            <p class="price">200 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="d9ecfde0-2c54-4e51-9bce-9d2bde021a8c.jfif " alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX Blanc BOITE SIMPLE</h3>
+            <p class="price">220 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+         <div class="card">
+            <img src="ed3d1d27-89c7-45d5-b5f2-a07f6fc12bab.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX Blanc BOITE SIMPLE</h3>
+            <p class="price">190 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+         <div class="card">
+            <img src="bebc3c89-7790-4583-a084-bf462636670f.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX BLEU BOITE SIMPLE</h3>
+            <p class="price">190 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="12f30b08-494a-467e-b52d-acd3dbfdbc9d.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX ARABIA BOITE SIMPLE</h3>
+            <p class="price">185 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        <div class="card">
+            <img src="72b81c26-5343-4c50-881a-68b901e125a2.jfif" alt="Seiko Luxe" class="card-image">
+            <h3>ROLEX ARABIA BOITE SIMPLE</h3>
+            <p class="price">185 DH</p>
+            <button class="buy-btn">Voir Détails</button>
+        </div>
+        
+        
+        
+
+
+
+
+
+    </div>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay">
+    <div class="overlay-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="watch-name"></h2>
+        <img id="watch-image" src="" alt="Montre" style="width:200px; margin-top:10px;">
+        <div class="colors"></div>
+    </div>
+</div>
+
+<footer>
+    <p>Suivez-nous sur les réseaux sociaux :</p>
+     <div class="social-icons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/2120615465189" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/toncompte" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+         <!-- TikTok -->
+        <a href="https://www.tiktok.com/@abyass_watches" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+
+    </div>
+    <p>&copy; 2025 abyass watches®</p>
+</footer>
+
+<script>
+const overlay = document.getElementById('overlay');
+const watchName = document.getElementById('watch-name');
+const watchImage = document.getElementById('watch-image');
+const colorsDiv = overlay.querySelector('.colors');
+const closeBtn = overlay.querySelector('.close-btn');
+
+document.querySelectorAll('.buy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const card = btn.closest('.card');
+        const imgSrc = card.querySelector('.card-image').src;
+        const name = card.querySelector('h3').textContent;
+
+        watchName.textContent = name;
+        watchImage.src = imgSrc;
+
+        colorsDiv.innerHTML = '';
+
+        // exemple dyal couleurs dynamiques
+        const colorList = ['#000000','#C0C0C0','#FFD700']; 
+        colorList.forEach(c=>{
+            const div=document.createElement('div');
+            div.className='color-circle';
+            div.style.background=c;
+            div.addEventListener('click',()=>{ watchImage.src = imgSrc; }); 
+            colorsDiv.appendChild(div);
+        });
+
+        overlay.style.display='flex';
+    });
+});
+
+closeBtn.addEventListener('click',()=>overlay.style.display='none');
+overlay.addEventListener('click', e => { if(e.target === overlay) overlay.style.display='none'; });
+</script>
+
+</body>
+</html>
